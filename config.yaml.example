@@ -1,0 +1,37 @@
+# Nasl3yn DataHub Agent Configuration
+# Copy to config.yaml and fill in your values
+
+datahub:
+  gms_url: "https://your-datahub-instance.com"  # DataHub GMS endpoint
+  token: "your-datahub-token"                   # Personal access token
+  timeout_seconds: 30
+
+mcp_server:
+  host: "0.0.0.0"
+  port: 8001
+  transport: "stdio"  # or "sse" for HTTP
+
+agent:
+  name: "nasl3yn-cinematic-orchestrator"
+  description: "Autonomous video pipeline orchestrator using DataHub context"
+  max_concurrent_workflows: 3
+  default_model: "veo-2"
+  poll_interval_seconds: 10
+
+cinematic:
+  platform_name: "nasl3yn"
+  default_resolution: "3840x2160"
+  default_codec: "hevc"
+  asset_namespace: "cinematic"
+  metadata_schema_version: "1.0"
+
+logging:
+  level: "INFO"
+  format: "json"
+  output: "stdout"
+
+# Optional: Webhook for completion notifications
+webhook:
+  enabled: false
+  url: ""
+  secret: ""
