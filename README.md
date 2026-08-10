@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
 # Nasl3yn DataHub Agent — Cinematic Context Platform
 
 Apache 2.0 License
